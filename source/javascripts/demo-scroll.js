@@ -15,7 +15,8 @@ $(document).ready(function($) {
   var controller;
   controller = new ScrollMagic();
 
-  var scene = new ScrollScene({triggerElement: "#trigger1", duration: getWindowHeight})
+  //var scene = new ScrollScene({triggerElement: "#trigger1", duration: getWindowHeight})
+    var scene = new ScrollScene({triggerElement: "#trigger1", duration: 300})
     .setPin("#pin1")
     .addTo(controller);
 
