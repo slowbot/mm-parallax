@@ -1,17 +1,13 @@
 mm-parallax
 ==================
 
-## Mister Machine Pattern Library
+## Mister Machine Parallax
 
-A starter project for front-end pattern libraries.
+A starter project for parallax animations.
 
 Built with Middleman and Foundation.
 
 ## Getting Started
-
-Clone Pattern Library:
-
-`$ git clone git@github.com:menslow/mm-pattern-library.git`
 
 Run Bundle Install to Ruby Gem dependancies:
 
