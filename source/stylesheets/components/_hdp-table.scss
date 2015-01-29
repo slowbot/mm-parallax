@@ -1,6 +1,6 @@
 /* Overall Diagram */
 
-.lowerbody .hadoop_arch .cell {
+.lowerbody .hadoop_arch td {
   display: table-cell;
   width: auto;
 }
@@ -10,12 +10,13 @@
   word-break:normal; 
   margin: 0 auto;
   font-size: 16px;
-  line-height: 1em;
 }
 
 .maintable { 
-  position: relative;
-  //overflow: hidden;
+  position: relative; 
+  border-spacing: 5px; 
+  border-collapse: separate; 
+  margin-left: -5px; 
 }
 
 /* Customize Diagram based on type */
@@ -25,6 +26,10 @@
 
 .hi .lowlevel { 
   display: none;
+}
+
+.external .sec.external { 
+  display: table-cell;
 }
 
 /* Sections */
@@ -54,11 +59,9 @@
     border-radius: 5px 5px 0 0; 
   }
 
-  &.side {
-    float: left;
+  &.side { 
     width: 15%; 
-    min-width:100px;
-    margin: 0 .5%;
+    min-width:80px;
     
     .label { 
       margin-bottom: 50px; 
@@ -93,9 +96,7 @@
 }
 
 .hadoop_arch .core { 
-  float: left;
   width: 50%;
-  margin: 0 .5%;
 }
 
 .hadoop_arch .purpose { 
@@ -151,7 +152,7 @@
     color: #fff; 
     height: 70px; 
     padding-top: 25px; 
-    margin-top: -20px;
+    margin-top: -20px; 
   }
 
   &.component.hilight { 
@@ -216,26 +217,24 @@
     z-index: 5; 
     border-spacing: 5px; 
     border-collapse: separate; 
-    width: 100%; 
+    table-layout: 
+    fixed; width: 100%; 
     font-size: 100%;
 
-    .component {
-      float: left;
+    td { 
       height:110px; 
-      width: 12%;
-      margin: 0 .2%;
     }
 
     li { 
       font-size: 90%; 
     }
 
-    .others { 
+    td.others { 
       background-color: #f6f6f6; 
       border: 1px dashed #ddd; 
     }
 
-    .more { 
+    td.more { 
       display: none; 
     }
   }

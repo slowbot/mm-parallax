@@ -1,0 +1,423 @@
+/* == VARIABLES == */
+$primary-green:       #69be28;
+$light-green:         #c2e0b0;
+$pale-green:        #e6f2df;
+$dark-green:        #3d7215;
+
+$primary-orange:      #e17000;
+$light-orange:        #fcc79b;
+$pale-orange:         #fee8d4;
+$dark-orange:         #b05801;
+$bright-orange:             #ff8003; // Used as for a few hovers
+
+$primary-blue:        #44697d;
+$light-blue:        #9bafc3;
+$pale-blue:         #d4dee7;
+$dark-blue:         #334f5e;
+$blue-grey:         #598ba6; // Used for links
+
+$dark-grey:         #756e69;
+$light-grey:        #d7d5d4; // Deviating from the styles
+$background-grey:         #f2f0ef;
+$super-light-grey:        #f9f8f8;
+
+$radius:3px;
+
+$fonts-path:        "../../fonts";
+$arrow-path:        "../../arrow-font";
+$header-font:       "Cabin", "Helvetica Neue", Arial, Helvetica,  "Lucida Grande", sans-serif; // "Open Sans", "Cabin"
+$base-font:         "Helvetica Neue", Helvetica, Arial, "Open Sans", "Lucida Grande", sans-serif;
+$quote-font:        "Roboto Slab", serif;
+$base-font-size:    16px;
+
+// $Breakpoints
+// Change these valuese to desired screen sizes
+
+// small and Up
+$small-screen:      emCalc( 480px ) !default; 
+
+// medium and Up
+$medium-screen:     emCalc( 768px ) !default;
+
+// tablet and Up
+$tablet-screen:     emCalc( 840px ) !default;
+
+// medium and Up
+$desktop-screen:     emCalc( 960px ) !default;
+
+// large and up
+$large-screen:      emCalc( 1200px ) !default; 
+
+// $Media Queries
+// Used in breakpoint mixin
+$screen:            "only screen" !default;
+$small:             "#{$screen} and (min-width: #{$small-screen})" !default;
+$medium:            "#{$screen} and (min-width: #{$medium-screen})" !default;
+$tablet:            "#{$screen} and (min-width: #{$tablet-screen})" !default;
+$desktop:           "#{$screen} and (min-width: #{$desktop-screen})" !default;
+$large:             "#{$screen} and (min-width: #{$large-screen})" !default;
+
+//
+// Breakpoint
+// If $fixed-media variable is set to 'true', all properties called in the mixin will be compiled out.
+// For example, legacy IE browsers will get the desktop only version of the app (fixed media).
+//
+$fixed-media: false !default;
+
+@mixin breakpoint( $size: screen ) {
+
+    @if $fixed-media == false { // Not using fixed-media, use media queries
+
+        @if $size == small {
+            @media #{$small} {
+                @content;
+            }
+        }
+        @else if $size == medium {
+            @media #{$medium} {
+                @content;
+            }
+        }
+        @else if $size == desktop {
+            @media #{$desktop} {
+                @content;
+            }
+        }
+        @else if $size == large {
+            @media #{$large} {
+                @content;
+            }
+        }
+        @else if $size == landscape {
+            @media #{$landscape} {
+                @content;
+            }
+        }
+        @else {
+            @media #{$screen} {
+                @content;
+            }
+        }
+
+    } @else {
+
+        // Compile out without media queries
+        @content;
+    }
+
+}
+
+// Short-hand version of breakpoint
+@mixin bp( $size: screen ) {
+    @include breakpoint( $size );
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Translates pixels to ems.
+// Uses $base-font-size for... base, yeah.
+//
+@function emCalc( $size ) {
+    @return ( $size / $base-font-size ) * 1em;
+}
+
+
+// GLOBAL
+html,
+button,
+input,
+select,
+textarea  { color: #333; }
+body, table { 
+  font-size: 1em; 
+  line-height: 1.5;  
+  font-family:$base-font; 
+  font-weight:300; 
+}
+
+/* Remove text-shadow in selection highlight: h5bp.com/i */
+::-moz-selection, ::selection { 
+  background: #b3d4fc; 
+  text-shadow: none;  
+}
+
+a { 
+  color:$blue-grey; 
+  
+  &:visited { color:$blue-grey; }
+  &:hover { color:$primary-orange; }
+}
+
+
+figcaption { text-align:center; color:#999; font-size:80%; }
+
+
+/* We should really add some context to this... h1's, h2's appear differently in panel pages than L300 pages. */
+
+h1 {
+    font-size:250%;
+    font-weight:300;
+    line-height: 1.125em;
+    margin:0px 0px 20px;
+    font-family:$header-font;
+
+    @include breakpoint( medium ) {
+        font-size:380%;
+        line-height: 1.5em;
+    }
+
+    &+.subtitle {
+        font-size:110%;
+        color:#999;
+        font-weight:300;
+        margin-top:0px;
+
+        @include breakpoint( medium ) {
+            font-size:140%;
+        }
+    }
+
+    &.wordy {
+        font-size:300%;
+        padding-top:10px;
+    }
+
+    a { text-decoration:none; }
+}
+
+h2 {
+    font-size:200%;
+    font-weight:300;
+    margin:10px 0px 15px;
+    overflow:auto;
+    font-family:$header-font;
+
+    &+.subtitle {
+        font-size:110%;
+        color:#aaa;
+        font-weight:300;
+        margin-top:-20px;
+        margin-bottom:20px;
+        line-height: 170%;
+    }
+
+    &+h3 { margin-top:0px; }
+    &+p { margin-top:5px; }
+    a { text-decoration:none; }
+}
+
+h3 {
+    font-size:145%;
+    margin:40px 0 10px;
+    font-family:$header-font;
+    font-weight:300;
+
+    @include breakpoint( medium ) {
+
+    }
+
+    &+p { margin-top:0px; }
+    a { text-decoration:none;}
+}
+
+h4 { margin:0px;
+    &+p { margin-top:0px; }
+}
+
+/* A better looking default horizontal rule */
+hr { 
+  display: block; 
+  height: 1px; 
+  border: 0; 
+  border-top: 1px solid #ccc; 
+  margin: 1em 0; 
+  padding: 0; 
+}
+
+// MEDIA
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440  */
+img { 
+  max-width: 100%;
+  vertical-align: middle;
+  
+  &.shadowed  {
+    -webkit-filter: drop-shadow(0px 0px 8px rgba(0,0,0,0.5));
+    filter: url(/wp-content/themes/hortonworks/css/v3/shadow.svg#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#777')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#777')";
+  }
+} 
+
+// BUTTONS
+.btn {
+  display:inline-block;
+  padding:5px 10px;
+  text-decoration:none;
+  text-align:center;
+  border-radius:$radius;
+  color:#fff;
+  background-color:$primary-green;
+  font-weight:bold;
+  margin-right:5px;
+  margin-bottom:5px;
+
+  &:active { position:relative; top:1px; }
+  &:focus {  }
+  &:visited { color:#fff; }
+  &:hover { color:#fff;
+    background-color:$dark-green;
+  }
+
+  .subtext {
+    color:$pale-blue;
+    color:#9ac5dc;
+    font-weight:normal;
+    font-size:75%;
+    text-transform:uppercase;
+    display:block;
+    margin-top:4px;
+  }
+
+  &.small { 
+    padding:5px 10px; 
+    font-size:80%;
+  }
+
+  &.large { 
+    padding:15px 30px; 
+    font-size:120%;
+  }
+
+  // Used when there's some smaller text below the main button text
+  &.w_subtext { padding:5px; }
+
+  // Used where the buttons need to take up the whole div
+  &.full { 
+    width:100%; 
+    display:block; 
+  }
+
+    &.clear {
+        color:$primary-green !important;
+        border:1px solid #DCDCDC;
+        background-color:$background-grey !important;
+        @include background-image(linear-gradient(rgba(246,247,247,1) 0%, rgba(231,232,233,1) 100%));
+
+        &:hover {
+            border:1px solid #DCDCDC;
+            background-color:$background-grey;
+            @include background-image(linear-gradient(rgba(231,232,233,1) 0%, rgba(246,247,247,1) 100%));
+        }
+    }
+
+    // These override elements are designed for a white background. For use on green backgrounds, or other colors, see below.
+    &.loud {
+        background:$primary-orange;
+        color:#fff;
+        border:0px solid $dark-orange;
+
+        &:hover { background-color:$bright-orange; }
+        .subtext { color:$pale-orange; }
+    }
+}
+
+// LINKS
+
+/* For documents linking to xyz sort of file */
+a.pdf { padding-left:20px; background:url(../images/icons/pdf_icon.png) no-repeat; }
+
+
+// LISTS
+ol              { padding-left:20px; }  // Flush by default.
+ol li           { margin-bottom:5px; }
+ul ul           { padding:0px; }
+
+/* No Indent for the list */
+ul.no-indent    { padding-left:15px;}
+
+/* Simple, no dots, just line-breaks */
+ul.nodots       { padding:0px;
+    li          { list-style-type:none; }
+}
+
+/* Create a commma separated list */
+ul.comma_separated {
+    overflow:auto;
+    padding-left:0px;
+    display:inline-block;
+
+    li { list-style-type:none; display:inline-block;
+        &:after { content:", " }
+        &:last-child:after  { content:""; }
+    }
+}
+
+/* Used for a list of links */
+ul.jump_offs {
+    list-style-type:none;
+    padding-left:0px;
+}
+
+/* Use with lots of text per bullet. - Adds spacing below the list item to give it more of a paragraph styling */
+ul.wide li, ol.wide li {
+    margin-bottom:10px;
+
+    b:first-child,
+    strong:first-child, { display:block; }
+    b+br { display:none; }
+}
+
+ul.check {
+    padding-left:0px;
+    list-style-type:none;
+
+    li {
+        padding-left:25px;
+        background:url(/wp-content/themes/hortonworks/images/icons/check_grey_x16.png) left 3px no-repeat;
+        vertical-align:top;
+        margin-bottom:10px;
+    }
+}
+
+// TABLES
+table.fixed,
+table.fixed tbody   { table-layout:fixed; }
+td                  { vertical-align:top; }
+
+/* We don't need padding around a UL if it's the only content in a table */
+td>ul:first-child   { margin-top:0px; margin-bottom:0px;}
+
+
+
+// GENERAL COPY RULES
+/* Avoids funky spacing at the top of a column that starts with a paragraph */
+div>p:first-child { margin-top:0px; }
+
+
+// GENERIC INLINE STYLES
+/* Notations are used for those little footer notes about what's not quite right.... kind of an antiquated paper concept, but occasionally useful. - Used currently in downloads. */
+.notations      {  font-size:85%; font-style:italic; }
+
+/* Typer - Couldn't think of a better terminology - Describes the type of content below it */
+.typer          { color:#aaa; text-transform:uppercase; font-size:80%; }
+
+/* Used as a bit of subtext - Maybe below a form, or a picture */
+.footnote       { font-size:85%; }
+
+/* Marker - used to grafiti text..  using it on the homepage to add 2.0 after HDP */
+.marker         { font-family: 'Permanent Marker', sans-serif; }
+
+/* Used at the bottom of blog posts to show categories this post belongs to. */
+.categories a   { background-color:$background-grey; padding:3px 5px;  border-radius:3px;  line-height:2;  text-decoration:none; }
+
+/* Used to show an update at the beginning of a blog post */
+.update-note    { background-color:#f6f6f6;  padding:10px; font-weight:bold; }
