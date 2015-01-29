@@ -35,7 +35,7 @@ $(document).ready(function($) {
     })
 
     .setTween(TweenMax.fromTo("#ha_data_access", 0.5, 
-      {"top": "-250px"},
+      {"top": "-2250px"},
       {"top": "0",
       ease: Linear.easeNone}
     ))
@@ -50,7 +50,7 @@ $(document).ready(function($) {
     })
 
     .setTween(TweenMax.fromTo("#ha_governance", 0.5, 
-      {"left": "-200px"},
+      {"left": "-2200px"},
       {"left": "0",
       ease: Linear.easeNone}
     ))
@@ -65,7 +65,7 @@ $(document).ready(function($) {
     })
 
     .setTween(TweenMax.fromTo("#ha_security", 0.5, 
-      {"right": "-400px"},
+      {"right": "-2400px"},
       {"right": "0",
       ease: Linear.easeNone}
     ))
@@ -80,7 +80,7 @@ $(document).ready(function($) {
     })
 
     .setTween(TweenMax.fromTo("#ha_ops", 0.5, 
-      {"right": "-200px"},
+      {"right": "-2200px"},
       {"right": "0",
       ease: Linear.easeNone}
     ))
