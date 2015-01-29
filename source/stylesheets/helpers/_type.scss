@@ -1,0 +1,110 @@
+%small-text {
+  font-family: $sans-font-family;
+  color: #999;
+}
+
+%small-link {
+  color: $primary-color;
+  text-transform: uppercase;
+} 
+
+%post-text {
+  font-family: $sans-font-family;
+  color: #656868; 
+}
+
+%no-margin {
+  #{h1, h2, h3, h4, h5, h6, p} {
+    margin-bottom: .25rem;
+  }
+}  
+
+.serif {
+  font-family:$serif-font-family;
+}
+
+.sans {
+  font-family:$sans-font-family;
+}
+
+.large {
+//    @include type-scale(large);
+}
+
+.medium {
+//    @include type-scale(medium);
+}
+
+.base {
+//   @include type-scale(base);
+}
+
+.bold {
+   @include type-weight(bold);
+}
+
+.semi {
+   @include type-weight(semi);
+}
+
+.normal {
+  @include type-weight(regular);
+}
+
+.light {
+  @include type-weight(light);
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.small {
+//  @include type-scale(tiny);
+}
+
+.dim {
+  color: $aluminum;
+}
+
+.pill {
+  @extend %bound;
+  background-color: $iron;
+}
+
+%bound {
+  border-radius: $global-radius;
+  display: inline-block;
+  padding: .5em 1em;
+  vertical-align: middle;
+}
+
+.two-column {
+    @media #{$medium-up} {
+        -moz-column-count: 2;
+        -moz-column-gap: 50px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 50px;
+
+        ul, dl {
+            -webkit-column-break-inside: avoid;
+            -moz-column-break-inside: avoid;
+            -moz-page-break-inside: avoid;
+            page-break-inside: avoid;
+        }
+    }
+}
+
+.more {
+    white-space: nowrap;
+}
+
+ul, ul li ul {
+    list-style: none;
+    margin: 0;
+    letter-spacing: .04em;
+}
+
+dl dt, dl dd {
+    margin: 0;
+}

@@ -1,0 +1,25 @@
+.relative {
+  position: relative;
+}
+
+.top-left {
+  display: block;
+  position: relative;
+  top: 1em;
+  left: 1em;
+  height: 4em;
+  width: 1em;
+
+  @media #{$medium-up} {
+    position: absolute;
+
+  }  
+}
+
+.top-right {
+  @media #{$medium-up} {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+}

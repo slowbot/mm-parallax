@@ -1,0 +1,19 @@
+// Quick Rems with PX
+@mixin font-size($sizeValue: 12) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.125 * $sizeValue) + rem;
+}
+
+@mixin line-height($heightValue: 12) {
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.125 * $heightValue) + rem;
+}
+
+//http://www.sitepoint.com/sass-mixins-kickstart-project/
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// http://foundation.zurb.com/docs/components/global.html

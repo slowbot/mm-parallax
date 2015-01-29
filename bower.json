@@ -1,0 +1,11 @@
+{
+  "name": "mm-pattern-library",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "jquery": "~2.1.1",
+    "angular": "~1.3.1",
+    "google-code-prettify": "~1.0.3"
+  }
+}

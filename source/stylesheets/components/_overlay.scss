@@ -1,0 +1,15 @@
+.overlay {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  figcaption {
+    @extend %full-overlay;
+
+    p {
+      @extend %vertical-align;
+      color: #fff;
+      text-align: center;
+    } 
+  } 
+}
