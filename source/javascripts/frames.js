@@ -2,7 +2,7 @@ var anim_frames = [
 	{
 		offset: 500,
 		keyframes: {
-			yarn: {'top': -1000, opacity: 0},
+			ha_data_access: {'top': -1000, opacity: 0},
 		},
 	setCaption: 1
 
@@ -10,7 +10,7 @@ var anim_frames = [
 	{
 		offset: 900,
 		keyframes: {
-			yarn: {'top': 0, opacity: 1},
+			ha_data_access: {'top': 0, opacity: 1},
 			data_management: {opacity: 1}
 		}
 	},
@@ -28,13 +28,13 @@ var anim_frames = [
 	{
 		offset: 100,
 		keyframes: {
-			element_1: {opacity: 0, 'top': -50}
+			ha_script: {opacity: 0, 'top': -50}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_2: {opacity: 0, 'top': -50},
+			ha_sql: {opacity: 0, 'top': -50},
 			governance_pointer: {'left': -1000, opacity: 0},
 			ha_governance: {opacity: 0, 'left': -1000}
 		}	
@@ -42,52 +42,52 @@ var anim_frames = [
 	{
 		offset: 50,
 		keyframes: {
-			element_3: {opacity: 0, 'top': -50}
+			ha_stream: {opacity: 0, 'top': -50}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_4: {opacity: 0, 'top': -50}
+			ha_nosql: {opacity: 0, 'top': -50}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_5: {opacity: 0, 'top': -50},
-			element_1: {opacity: 1, 'top': 0}
+			ha_stream_2: {opacity: 0, 'top': -50},
+			ha_script: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_6: {opacity: 0, 'top': -50},
-			element_2: {opacity: 1, 'top': 0}
+			ha_solr: {opacity: 0, 'top': -50},
+			ha_sql: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_3: {opacity: 1, 'top': 0},
-			ha_data_access: {opacity: 0}
+			ha_stream: {opacity: 1, 'top': 0},
+			//ha_data_access: {opacity: 0.5}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_4: {opacity: 1, 'top': 0}
+			ha_nosql: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_5: {opacity: 1, 'top': 0}
+			ha_stream_2: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_6: {opacity: 1, 'top': 0}
+			ha_solr: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
@@ -95,7 +95,7 @@ var anim_frames = [
 		keyframes: {
 			yarn: {'top': 0, opacity: .5},
 			data_management: {opacity: .5},
-			ha_data_access: {opacity: 1}
+			//ha_data_access: {opacity: 1}
 		}	
 	},
 	{
