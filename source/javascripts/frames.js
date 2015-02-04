@@ -93,8 +93,8 @@ var anim_frames = [
 	{
 		offset: 50,
 		keyframes: {
-			yarn: {scale: 1, 'top': 0, opacity: .5},
-			data_management: {scale: 1, opacity: .5},
+			yarn: {'top': 0, opacity: .5},
+			data_management: {opacity: .5},
 			ha_data_access: {opacity: 1}
 		}	
 	},
