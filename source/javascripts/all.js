@@ -16,5 +16,6 @@
 //= require jquery-scrolltofixed.js
 //= require angular/angular
 //= require app
-//= require demo-scroll
+//= require frames
+//= require demo-scroll-new
 //= require controllers/loan-calculator-controller

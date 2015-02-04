@@ -21,13 +21,13 @@ $(function() {
 		.setClassToggle("#caption-"+caption, "active") // add class toggle
 		.addTo(base.controller);
 
-		new ScrollScene({
+		/* new ScrollScene({
 	    triggerElement: content_wrapper,
 			offset: offset,
 			duration: duration
 		})
 		.setClassToggle("#dot-"+caption, "active") // add class toggle
-		.addTo(base.controller);
+		.addTo(base.controller); */
 	}
 	function processFrames(anim_frames) {
 	  	var overall_offset = 0,
@@ -75,17 +75,14 @@ $(function() {
 	  		for(var i = 1; i < story.length; i++) {
 	  			var frame = story[i];
 	  			total_length += frame.offset;
-				t.to(e[name].element, frame.offset - last_frame_offset, frame.keyframe);
+				t.to($('#'+name), frame.offset - last_frame_offset, frame.keyframe);
 	  			last_frame_offset = frame.offset;	
 	  		}
 			addScene(story_start, last_frame_offset - story_start, t);
 	  	}
 	}
 
-  var s = Snap("#svg");
-  var g = s.group();
 
-  Snap.load("svg-canvas2.svg", function(f) {
 	
 	base.controller = new ScrollMagic();
 
@@ -102,7 +99,7 @@ $(function() {
 
 
 
-	new ScrollScene({
+	/* new ScrollScene({
 	    triggerElement: content_wrapper,
 			offset: 3100,
 			duration: 300
@@ -114,7 +111,7 @@ $(function() {
 			)
 		
 
-		.addTo(base.controller);
+		.addTo(base.controller); */
 
 	new ScrollScene({
 	    triggerElement: content_wrapper,
@@ -156,5 +153,5 @@ $(function() {
 		))
 		.addTo(base.controller); 
 		
-  });
+  
 });

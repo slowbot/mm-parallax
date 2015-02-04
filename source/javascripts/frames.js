@@ -2,7 +2,7 @@ var anim_frames = [
 	{
 		offset: 500,
 		keyframes: {
-			yarn: {ty: -1000, opacity: 0},
+			yarn: {'top': -1000, opacity: 0},
 		},
 	setCaption: 1
 
@@ -10,7 +10,7 @@ var anim_frames = [
 	{
 		offset: 900,
 		keyframes: {
-			yarn: {ty: 0, opacity: 1},
+			yarn: {'top': 0, opacity: 1},
 			data_management: {opacity: 1}
 		}
 	},
@@ -21,79 +21,79 @@ var anim_frames = [
 	{
 		offset: 300,
 		keyframes: {
-			yarn: {ty: 0, opacity: .5},
+			yarn: {'top': 0, opacity: .5},
 			data_management: {opacity: .5}
 		}	
 	},
 	{
 		offset: 100,
 		keyframes: {
-			element_1: {opacity: 0, ty: -50}
+			element_1: {opacity: 0, 'top': -50}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_2: {opacity: 0, ty: -50},
-			governance_pointer: {tx: -1000, opacity: 0},
-			ha_governance: {opacity: 0, tx: -1000}
+			element_2: {opacity: 0, 'top': -50},
+			governance_pointer: {'left': -1000, opacity: 0},
+			ha_governance: {opacity: 0, 'left': -1000}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_3: {opacity: 0, ty: -50}
+			element_3: {opacity: 0, 'top': -50}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_4: {opacity: 0, ty: -50}
+			element_4: {opacity: 0, 'top': -50}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_5: {opacity: 0, ty: -50},
-			element_1: {opacity: 1, ty: 0}
+			element_5: {opacity: 0, 'top': -50},
+			element_1: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_6: {opacity: 0, ty: -50},
-			element_2: {opacity: 1, ty: 0}
+			element_6: {opacity: 0, 'top': -50},
+			element_2: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_3: {opacity: 1, ty: 0},
+			element_3: {opacity: 1, 'top': 0},
 			ha_data_access: {opacity: 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_4: {opacity: 1, ty: 0}
+			element_4: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_5: {opacity: 1, ty: 0}
+			element_5: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			element_6: {opacity: 1, ty: 0}
+			element_6: {opacity: 1, 'top': 0}
 		}	
 	},
 	{
 		offset: 50,
 		keyframes: {
-			yarn: {scale: 1, ty: 0, opacity: .5},
+			yarn: {scale: 1, 'top': 0, opacity: .5},
 			data_management: {scale: 1, opacity: .5},
 			ha_data_access: {opacity: 1}
 		}	
@@ -107,8 +107,8 @@ var anim_frames = [
 	{
 		offset: 100, // 3450
 		keyframes: {
-			ha_security: {opacity: 0, tx: 1000},
-			security_pointer: {opacity: 0, tx: 1000}
+			ha_security: {opacity: 0, 'left': 1000},
+			security_pointer: {opacity: 0, 'left': 1000}
 	},
 	setCaption: 3
 	},
@@ -121,15 +121,15 @@ var anim_frames = [
 	{
 		offset: 200,
 		keyframes: {
-			governance_pointer: {tx: -1000, opacity: 0},
-			ha_governance: {opacity: 0, tx: -1000}
+			governance_pointer: {'left': -1000, opacity: 0},
+			ha_governance: {opacity: 0, 'left': -1000}
 		}	
 	},
 	{
 		offset: 200,
 		keyframes: {
-			governance_pointer: {tx: 0, opacity: 1},
-			ha_governance: {opacity: 1, tx: 0}
+			governance_pointer: {'left': 0, opacity: 1},
+			ha_governance: {opacity: 1, 'left': 0}
 		}	
 	},
 	{
@@ -160,10 +160,10 @@ var anim_frames = [
 	{
 		offset: 100, //5150
 		keyframes: {
-			ha_security: {opacity: 1, tx: 0},
-			security_pointer: {opacity: 1, tx: 0},
-			ha_ops: {opacity: 0, tx: 1000},
-			operations_pointer: {opacity: 0, tx: 1000}
+			ha_security: {opacity: 1, 'left': 0},
+			security_pointer: {opacity: 1, 'left': 0},
+			ha_ops: {opacity: 0, 'left': 1000},
+			operations_pointer: {opacity: 0, 'left': 1000}
 		}		
 	},
 	{
@@ -183,8 +183,8 @@ var anim_frames = [
 	{
 		offset: 500,
 		keyframes: {
-			ha_ops: {opacity: 1, tx: 0},
-			operations_pointer: {opacity: 1, tx: 0},
+			ha_ops: {opacity: 1, 'left': 0},
+			operations_pointer: {opacity: 1, 'left': 0},
 			ha_security: {opacity: .25}
 		}	
 	},
