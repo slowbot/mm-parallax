@@ -89,7 +89,7 @@ $(function() {
 	// Pin
 	new ScrollScene({
     	triggerElement: content_wrapper,
-		offset: 900,
+		offset: 300,
 		duration: 6000
 	})
 	.setPin('#pin')
