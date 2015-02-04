@@ -68,6 +68,7 @@ var anim_frames = [
 	{
 		offset: 50,
 		keyframes: {
+			ha_others: {opacity: 0, 'top': -50},
 			ha_stream: {opacity: 1, 'top': 0},
 			//ha_data_access: {opacity: 0.5}
 		}	
@@ -75,6 +76,7 @@ var anim_frames = [
 	{
 		offset: 50,
 		keyframes: {
+			ha_others_2: {opacity: 0, 'top': -50},
 			ha_nosql: {opacity: 1, 'top': 0}
 		}	
 	},
@@ -95,11 +97,19 @@ var anim_frames = [
 		keyframes: {
 			yarn: {'top': 0, opacity: .5},
 			data_management: {opacity: .5},
+			ha_others: {opacity: 1, 'top': 0}
 			//ha_data_access: {opacity: 1}
 		}	
 	},
 	{
-		offset: 150,
+		offset: 50,
+		keyframes: {
+			ha_others_2: {opacity: 1, 'top': 0}
+			//ha_data_access: {opacity: 1}
+		}	
+	},
+	{
+		offset: 100,
 		keyframes: {
 			ha_data_access: {opacity: 1}
 	}
